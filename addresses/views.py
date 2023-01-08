@@ -7,6 +7,7 @@ from .models import Addresses
 from .serializers import AddressesSerializer
 from django.contrib.auth import authenticate
 
+
 # Create your views here.
 @csrf_exempt
 def addresses(request):
@@ -56,10 +57,8 @@ def login(request):
         if result:
             print('성공')
             return render(request, 'addresses/success.html')
-
         else:
             print('실패')
             return render(request, 'addresses/fail.html')
-
     return render(request, 'addresses/login.html')
 
